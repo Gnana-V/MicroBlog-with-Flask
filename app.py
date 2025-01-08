@@ -8,7 +8,7 @@ load_dotenv()
 
 def create_app():
     app= Flask(__name__)
-    app.debug = True  # Set debug mode explicitly
+    #app.debug = True  # Set debug mode explicitly
     client = MongoClient(os.getenv("MONGODB_URI"))
 
     app.db = client.Microblog
@@ -38,7 +38,7 @@ def create_app():
 
 
 
-    if __name__ == "__main__":
-        app.run(debug=True)  # Pass debug=True here too
+    #if __name__ == "__main__":
+        #app.run(debug=True)  # Pass debug=True here too
 
     return app
